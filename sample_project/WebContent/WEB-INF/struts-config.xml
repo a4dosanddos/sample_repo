@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!DOCTYPE struts-config PUBLIC
+ "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+ "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+	<form-beans>
+    	<form-bean
+			name="Popup"
+			type="action.popup.PopupForm" />
+	</form-beans>
+
+    <action-mappings>
+    	<action path="/Popup_base"
+     		type="action.popup.PopupAction"
+     		name="Popup">
+      		<forward name="popup" path="/popup_base.jsp"/>
+    	</action>
+    </action-mappings>
+
+	<message-resources parameter="popup.resources.application" />
+
+</struts-config>
